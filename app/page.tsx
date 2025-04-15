@@ -1,5 +1,3 @@
-import  {Swiper, SwiperSlide} from "swiper/react" 
-import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
 import BgImg from "./components/bg_img";
 import Featured from "./components/featured";
