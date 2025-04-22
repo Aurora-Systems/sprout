@@ -5,6 +5,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./custom.scss"
 import "./globals.css";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={`${mont.className}`}>
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

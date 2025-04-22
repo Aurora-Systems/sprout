@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden!important;
+}
 
 .header{
   height:90vh!important;

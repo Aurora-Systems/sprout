@@ -63,14 +63,14 @@ const Navbar = () => {
           <div className="navbar-brand">
             <Link href="/" className="text-decoration-none text-dark fw-bold d-flex flex-row align-items-center gap-2">
               <Image 
-                src="https://ngratesc.sirv.com/sprout/nav_sprout.png" 
+                src="https://ngratesc.sirv.com/sprout/primary_logo.png" 
                 className="img-fluid" 
                 width={50} 
                 height={50} 
                 alt="Sprout & Co" 
                 style={{ objectFit: 'contain' }}
               />
-              <span>Sprout & Co</span>
+              <span className="text-success">Sprout & Co</span>
             </Link>
           </div>
 
