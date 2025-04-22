@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isMobile, setIsMobile] = useState(false);
+  const [selected,set_selected] = useState("")
 
   // Check if we're on mobile when component mounts and when window resizes
   useEffect(() => {
@@ -77,10 +78,11 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="d-none d-md-block">
             <div className="d-flex gap-4">
-              <Link href="/" className="text-decoration-none text-dark fw-medium hover-underline">Shop</Link>
-              <Link href="/about" className="text-decoration-none text-dark fw-medium hover-underline">About</Link>
-              <Link href="/legal" className="text-decoration-none text-dark fw-medium hover-underline">Legal</Link>
-              <Link href="/contact" className="text-decoration-none text-dark fw-medium hover-underline">Contact</Link>
+            <Link href="/" className={`text-decoration-none  fw-medium hover-underline ${selected==="Home"?"text-success":"text-dark"}`} onClick={()=>set_selected("Home")}>Home</Link>
+              <Link href="/shop" className={`text-decoration-none fw-medium hover-underline ${selected==="Shop"?"text-success":"text-dark"}`} onClick={()=>set_selected("Shop")}>Shop</Link>
+              <Link href="/about" className={`text-decoration-none fw-medium hover-underline ${selected==="About"?"text-success":"text-dark"}`} onClick={()=>set_selected("About")}>About</Link>
+              <Link href="/legal" className={`text-decoration-none fw-medium hover-underline ${selected==="Legal"?"text-success":"text-dark"}`} onClick={()=>set_selected("Legal")}>Legal</Link>
+              <Link href="/contact" className={`text-decoration-none  fw-medium hover-underline ${selected==="Contact"?"text-success":"text-dark"}`} onClick={()=>set_selected("Contact")}>Contact</Link>
             </div>
           </div>
 
