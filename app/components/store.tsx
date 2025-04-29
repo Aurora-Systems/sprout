@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { store_default, StoreInterface } from "../schemas/store_schema"
+import BgImg, { show_img } from "./bg_img"
 
 const Store=()=>{
     const [search_value, set_search_value] = useState<string>("")
@@ -33,15 +34,19 @@ const Store=()=>{
             data.map((x,i)=>{
                 return(
  <div className="col-sm  p-2 col-md-3 border border-1 rounded" key={i}>
- <div style={{height:"30vh"}} >
+    <div style={{height:"30vh"}}>
+
+ <div style={{...BgImg(show_img(x.image_id))}} >
 
  </div>
+ </div>
+
  <div className="d-flex justify-content-between mb-3">
-     <span className="fw-bold">Huckle Berry</span>
-     <span className="text-success">$50.00</span>
+     <span className="fw-bold">{x.item_name}</span>
+     <span className="text-success">{x.price.toFixed(2)}</span>
  </div>
  <div style={{height:"10vh", overflowY:"auto"}}>
-<small>Freshly pciked huckle berrys. 12 days old  and less, comes with an additional grape treat</small>
+<small>{x.description}</small>
 </div>
 
  <div>
