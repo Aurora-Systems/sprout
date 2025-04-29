@@ -5,3 +5,12 @@ body{
 .header{
   height:90vh!important;
 }
+
+.cart_btn{
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  right:5%;
+  bottom: 10vh;
+  justify-content: end;
+}
