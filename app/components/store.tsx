@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { store_default, StoreInterface, test_data } from "../schemas/store_schema"
+import { CartInterface, store_default, StoreInterface, test_data } from "../schemas/store_schema"
 import BgImg, { show_img } from "./bg_img"
 import { Modal } from "react-bootstrap"
 import Link from "next/link"
@@ -9,8 +9,35 @@ const Store=()=>{
     const [search_value, set_search_value] = useState<string>("")
     const [loading,set_loading] = useState<boolean>(true)
     const [data, set_data] = useState<Array<StoreInterface>>([])
-    const [cart,set_cart] = useState<Array<StoreInterface>>([...test_data])
+    const [cart,set_cart] = useState<Array<CartInterface>>([...test_data])
     const [checkout_info,set_checkout_info] = useState()
+    const [show_cart,set_show_cart] = useState<boolean>(false)
+    const [cart_total,set_cart_total] = useState<number>(0)
+
+    const delete_cart_item =(index_id:number)=>{
+
+    }
+   
+
+    const total_cart_update =(index_id:number, symbol:"-"|"+")=>{
+        let total:number = 0;
+        const cart_data=cart.map((x,i)=>{
+            if(i===index_id){
+                if(symbol==="-"){
+                    x.cart_quantity=x.cart_quantity-1
+                }else{
+                    x.cart_quantity=x.cart_quantity+1
+                }
+            }
+            total=total+(x.price*x.cart_quantity)
+            return x
+        })
+
+        set_cart_total(total)
+        set_cart(cart_data)
+    }
+    
+   
 
     return(
         <div className="container mt-3 mb-3 min-vh-100">
@@ -59,7 +86,7 @@ const Store=()=>{
            }
                        </div>
 
-                       <Modal show={true} fullscreen={true}>
+                       <Modal show={show_cart} fullscreen={true}>
                         <Modal.Header className="d-flex justify-content-between align-items-center">
                             <h4 className="fw-bold text-success">View Cart</h4>
                             <button className="btn btn-outline-danger rounded-circle ">
@@ -78,17 +105,17 @@ const Store=()=>{
             </div>
             {cart?.map((x,i)=>{
                 return(
-                    <div className="mb-3" key={i}>
+                    <div className="mb-3 p-1 bg-light rounded" key={i}>
                         
                    
             <div className="d-flex flex-row flex-nowrap row position-relative" >
-                <div className="col-sm col-md-5">
+                <div className="col-2 col-md-5">
                     <div style={{...BgImg("https://ngratesc.sirv.com/sprout/swiper.png"), height:"30vh"}}  className="rounded-3" />
                 </div>
-                <div className="col-5">
-                    <div className="d-flex justify-content-between ">
+                <div className="col-sm">
+                    <div className="d-flex justify-content-between mb-2 ">
                         <span>{x.item_name}</span>
-                        <span className="text-success text-wrap">$25.67</span>                        
+                        <span className="text-success text-wrap">${(x.price*x.cart_quantity).toFixed(2)}</span>                        
                     </div>
                     <p style={{height:"15vh", overflowY:"auto"}} className="text-wrap">  
                     <small>{x.description}</small>
@@ -96,9 +123,9 @@ const Store=()=>{
                     </p>
                    
                     <div className="input-group">
-                        <button className="btn btn-outline-danger">-</button>
-                        <input className="form-control"/>
-                        <button className="btn btn-outline-success">+</button>
+                        <button className="btn btn-outline-danger" onClick={()=>total_cart_update(i, "-")} disabled={x.cart_quantity===1?true:false}>-</button>
+                        <input className="form-control text-center" value={x.cart_quantity} disabled/>
+                        <button className="btn btn-outline-success" disabled={x.in_stock===x.cart_quantity?true:false} onClick={()=>total_cart_update(i, "+")}>+</button>
                     </div>
                 </div>
                 <div className="position-absolute ">
@@ -136,9 +163,9 @@ const Store=()=>{
                     </div>
                     <div className="mb-3">
                         <input type="checkbox" className="input-checkbox"/>
-                        <span> &nbsp; By Proceeding with this transaction you agree to oyur <Link href="/legal">legal notices</Link></span>
+                        <span> &nbsp; By Proceeding with this transaction you agree to our <Link href="/legal">legal notices</Link></span>
                     </div>
-                <button type="submit" className="btn btn-outline-success w-100" >Checkout</button>
+                <button type="submit" className="btn btn-outline-success w-100" >Checkout ${cart_total.toFixed(2)}</button>
              </form>
             </div>
     </div>
@@ -148,7 +175,7 @@ const Store=()=>{
                        </Modal>
                        {/* CART BTN */}  
         <div >
-         {cart.length>0 ?  <button type="button" className="btn btn-success rounded-pill cart_btn shadow-lg align-items-center"><i className="bi bi-cart"/>&nbsp; View Cart</button>:<></>}
+         {cart.length>0 ?  <button type="button" className="btn btn-success rounded-pill cart_btn shadow-lg align-items-center" onClick={()=>set_show_cart(true)}><i className="bi bi-cart"/>&nbsp; View Cart</button>:<></>}
         </div>
         </div>
     )

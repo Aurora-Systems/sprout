@@ -8,6 +8,10 @@ export interface StoreInterface{
     user_id:string,
     id:number|null
 }
+export interface CartInterface extends StoreInterface{
+    cart_quantity:number
+
+}
 
 export const store_default:StoreInterface={
     item_name:"",
@@ -20,7 +24,7 @@ export const store_default:StoreInterface={
     id:null
 }
 
-export const test_data:Array<StoreInterface> = [
+export const test_data:Array<CartInterface> = [
     {
         item_name:"Apple Pine Hamper",
         image_id:"fffdgdg",
@@ -29,7 +33,8 @@ export const test_data:Array<StoreInterface> = [
         in_stock:10,
         price:5.00,
         user_id:"fjghjdgdjg",
-        id:5
+        id:5,
+        cart_quantity:1
     },
     {
         item_name:"Shona Fruits Hamper",
@@ -39,7 +44,8 @@ export const test_data:Array<StoreInterface> = [
         in_stock:10,
         price:5.00,
         user_id:"fjghjdgdjg",
-        id:5
+        id:5,
+        cart_quantity:1
     },
     {
         item_name:"Nkosi Hamper",
@@ -49,8 +55,10 @@ export const test_data:Array<StoreInterface> = [
         in_stock:10,
         price:5.00,
         user_id:"fjghjdgdjg",
-        id:5
-    },
+        id:5,
+        cart_quantity:1
+
+    }
 ]
 
 
