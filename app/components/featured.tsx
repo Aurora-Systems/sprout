@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
-import { useState } from "react";
+//import { useState } from "react";
 
 const Featured=()=>{
     // const [data,set_data]=useState([])
