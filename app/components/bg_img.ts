@@ -1,4 +1,4 @@
-import db from "../init/supabase"
+import {db} from "../api/supabase"
 
 const BgImg=(image_source:string)=>{
     return({
