@@ -11,7 +11,7 @@ export default function Shop() {
           <Fade cascade={true} delay={300}>
             
           <div>
-          <Image src={"https://ngratesc.sirv.com/sprout/primary_logo.png"}  className="img-fluid " width={200} height={0} alt="Sprout & Co"/>
+          <Image src={"https://sproutandco.sirv.com/primary_logo.png"}  className="img-fluid " width={300} height={0} alt="Sprout & Co"/>
           </div>
           <div className=" text-center mb-5">
             <h3 className="fw-bold text-success">Fresh Farm Produce</h3>
@@ -28,7 +28,7 @@ export default function Shop() {
           <div className="col-sm">
             <Fade direction="left" delay={300}>
 
-              <Image src={"https://ngratesc.sirv.com/sprout/hamperstack.png"} className="img-fluid rounded"  width={400} height={0} alt="..."/>
+              <Image src={"https://sproutandco.sirv.com/IMG-20250701-WA0053.jpg"} className="img-fluid rounded"  width={500} height={0} alt="..."/>
               </Fade>
 
           </div>
@@ -44,7 +44,7 @@ export default function Shop() {
           <div className="col-sm order-md-2">
             <Fade direction="left" delay={300}>
 
-              <Image src={"https://ngratesc.sirv.com/sprout/vegstack.png"} className="img-fluid rounded"  width={400} height={0} alt="..."/>
+              <Image src={"https://sproutandco.sirv.com/IMG-20250701-WA0045.jpg"} className="img-fluid rounded"  width={500} height={0} alt="..."/>
               </Fade>
 
           </div>

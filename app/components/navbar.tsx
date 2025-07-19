@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="navbar-brand">
             <Link href="/" className="text-decoration-none text-dark fw-bold d-flex flex-row align-items-center gap-2">
               <Image 
-                src="https://ngratesc.sirv.com/sprout/primary_logo.png" 
+                src="https://sproutandco.sirv.com/primary_logo.png" 
                 className="img-fluid" 
                 width={50} 
                 height={50} 
@@ -128,8 +128,15 @@ const Navbar = () => {
 
           {/* Mobile Navigation */}
           <div className="d-flex flex-column gap-4 mb-5">
-            <Link 
+             <Link 
               href="/" 
+              className="text-decoration-none text-dark fw-medium fs-5 py-2 border-bottom"
+              onClick={() => setIsDrawerOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              href="/shop" 
               className="text-decoration-none text-dark fw-medium fs-5 py-2 border-bottom"
               onClick={() => setIsDrawerOpen(false)}
             >

@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="col-12 col-md-4 mb-4">
             <div className="d-flex flex-column align-items-center align-items-md-start">
               <Image 
-                src="https://ngratesc.sirv.com/sprout/primary_logo.png" 
+                src="https://sproutandco.sirv.com/primary_logo.png" 
                 className="img-fluid mb-3" 
                 width={70} 
                 height={70} 
@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
 
         {/* Payment Methods - Optional */}
-        <div className="row mt-4">
+        {/* <div className="row mt-4">
           <div className="col-12">
             <div className="d-flex justify-content-center gap-3 payment-methods">
               <i className="bi bi-credit-card fs-4 text-muted"></i>
@@ -133,7 +133,7 @@ const Footer = () => {
               <i className="bi bi-google fs-4 text-muted"></i>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Divider */}
         <hr className="mt-4 mb-3" />

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat} from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "./custom.scss"
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";

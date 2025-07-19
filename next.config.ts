@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns:[
         {
             protocol: "https",
-            hostname: "ngratesc.sirv.com",
+            hostname: "sproutandco.sirv.com",
             port: "",
             pathname: "/**"
         }
