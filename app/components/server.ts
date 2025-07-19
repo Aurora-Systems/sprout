@@ -1,1 +1,1 @@
-export const server = "http://localhost:8080"
+export const server = "https://api.sproutandco.co.zw"

@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import { useState } from "react";
 
 const Featured=()=>{
-    const [data,set_data]=useState([])
+    // const [data,set_data]=useState([])
     return(
        <Swiper modules={[Pagination]} pagination={true} className="mySwiper">
             <SwiperSlide>
