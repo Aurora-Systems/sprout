@@ -24,7 +24,7 @@ const Footer = () => {
               <p className="text-muted text-center text-md-start">
                 Eco-friendly, sustainable products for a greener tomorrow.
               </p>
-              <div className="d-flex gap-3 mt-2 social-icons">
+              {/* <div className="d-flex gap-3 mt-2 social-icons">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="Facebook">
                   <i className="bi bi-facebook fs-5"></i>
                 </a>
@@ -37,89 +37,57 @@ const Footer = () => {
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="LinkedIn">
                   <i className="bi bi-linkedin fs-5"></i>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="col-6 col-md-2">
-            <h5 className="footer-heading mb-3">Shop</h5>
+            <h5 className="footer-heading mb-3">Pages</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/products" className="text-decoration-none text-muted hover-green">All Products</Link>
+                <Link href="/" className="text-decoration-none text-muted hover-green">Home</Link>
               </li>
               <li className="mb-2">
-                <Link href="/bestsellers" className="text-decoration-none text-muted hover-green">Best Sellers</Link>
+                <Link href="/shop" className="text-decoration-none text-muted hover-green">Shop</Link>
               </li>
               <li className="mb-2">
-                <Link href="/new-arrivals" className="text-decoration-none text-muted hover-green">New Arrivals</Link>
+                <Link href="/about" className="text-decoration-none text-muted hover-green">About</Link>
               </li>
               <li className="mb-2">
-                <Link href="/sale" className="text-decoration-none text-muted hover-green">Sale Items</Link>
+                <Link href="/contact" className="text-decoration-none text-muted hover-green">Contact</Link>
               </li>
             </ul>
           </div>
 
-          {/* Company */}
-          <div className="col-6 col-md-2">
-            <h5 className="footer-heading mb-3">Company</h5>
-            <ul className="list-unstyled footer-links">
-              <li className="mb-2">
-                <Link href="/about" className="text-decoration-none text-muted hover-green">About Us</Link>
-              </li>
-              <li className="mb-2">
-                <Link href="/sustainability" className="text-decoration-none text-muted hover-green">Sustainability</Link>
-              </li>
-              <li className="mb-2">
-                <Link href="/blog" className="text-decoration-none text-muted hover-green">Blog</Link>
-              </li>
-              <li className="mb-2">
-                <Link href="/careers" className="text-decoration-none text-muted hover-green">Careers</Link>
-              </li>
-            </ul>
-          </div>
-
+     
           {/* Customer Service */}
           <div className="col-6 col-md-2">
-            <h5 className="footer-heading mb-3">Support</h5>
+            <h5 className="footer-heading mb-3">Legal</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
-                <Link href="/contact" className="text-decoration-none text-muted hover-green">Contact Us</Link>
+                <Link href="/legal/Disclaimer" className="text-decoration-none text-muted hover-green">Disclaimer</Link>
               </li>
               <li className="mb-2">
-                <Link href="/faq" className="text-decoration-none text-muted hover-green">FAQs</Link>
+                <Link href="/legal/CookiePolicy" className="text-decoration-none text-muted hover-green">Cookie Policy</Link>
               </li>
               <li className="mb-2">
-                <Link href="/shipping" className="text-decoration-none text-muted hover-green">Shipping Info</Link>
+                <Link href="/legal/ReturnPolicy" className="text-decoration-none text-muted hover-green">Return Policy</Link>
               </li>
               <li className="mb-2">
-                <Link href="/returns" className="text-decoration-none text-muted hover-green">Returns & Refunds</Link>
+                <Link href="/legal/PrivacyPolicy" className="text-decoration-none text-muted hover-green">Privacy Policy</Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/legal/TermsAndConditions" className="text-decoration-none text-muted hover-green">Terms & Conditions</Link>
               </li>
             </ul>
           </div>
 
           {/* Newsletter */}
-          <div className="col-12 col-md-2">
+          <div className="col-sm">
             <h5 className="footer-heading mb-3">Newsletter</h5>
             <p className="text-muted small">Subscribe for updates, news and offers!</p>
-            <form className="mt-3">
-              <div className="input-group mb-3">
-                <input 
-                  type="email" 
-                  className="form-control" 
-                  placeholder="Your email" 
-                  aria-label="Email address" 
-                  aria-describedby="subscribe-button"
-                />
-                <button 
-                  className="btn btn-success" 
-                  type="submit" 
-                  id="subscribe-button"
-                >
-                  <i className="bi bi-arrow-right"></i>
-                </button>
-              </div>
-            </form>
+            <iframe src="https://sproutandco.substack.com/embed" className="w-100 rounded" style={{border:"1px solid #EEE", background:"white"}} frameBorder="0" scrolling="no"></iframe>
           </div>
         </div>
 
@@ -145,13 +113,7 @@ const Footer = () => {
               &copy; {currentYear} Sprout & Co. All rights reserved.
             </p>
           </div>
-          <div className="col-12 col-md-6 text-center text-md-end">
-            <div className="d-flex justify-content-center justify-content-md-end gap-3">
-              <Link href="/privacy" className="text-decoration-none text-muted small hover-green">Privacy Policy</Link>
-              <Link href="/terms" className="text-decoration-none text-muted small hover-green">Terms of Service</Link>
-              <Link href="/legal" className="text-decoration-none text-muted small hover-green">Legal</Link>
-            </div>
-          </div>
+         
         </div>
       </div>
 

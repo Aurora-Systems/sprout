@@ -121,7 +121,7 @@ export default function Tours(){
                 </div>
                 </Fade>
             </div>
-            <Modal show={show_checkout}>
+            <Modal show={show_checkout} size="lg">
                     <Modal.Header>
                         <h5>Visit {selected?.item_name}</h5>
                         <button type="button" onClick={()=>set_show_checkout(false)} className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -135,12 +135,13 @@ export default function Tours(){
                                          <p>
                                              {selected?.description}
                                          </p>
+                                         <p><small>Transport in Harare CBD is $5, outside CBD cost per km is $0.50. When checkout is complete our representatives will get in touch with your order</small></p>
                                      </div>
                             </div>
                             <div className="col-sm">
                                 <form onSubmit={checkout}>
                                     <div>
-                                        <h2>Fill up the form to continue</h2>
+                                        <h1>Fill up the form to continue</h1>
                                     </div>
                                     <div className="mb-2">
                                         <span>First Name</span>

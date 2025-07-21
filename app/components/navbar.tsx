@@ -166,7 +166,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Call Button */}
-          <Link href="tel:+1234567890" className="text-decoration-none">
+          <Link href="tel:+263776743323" className="text-decoration-none">
             <button className="btn btn-success w-100 rounded-pill" onClick={() => setIsDrawerOpen(false)}>
               <i className="bi bi-telephone me-2"></i> Call Us
             </button>
