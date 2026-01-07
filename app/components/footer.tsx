@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-white border-top pt-5 pb-3 mt-3">
       <div className="container">
@@ -13,31 +13,31 @@ const Footer = () => {
           {/* Logo and Company Info */}
           <div className="col-12 col-md-4 mb-4">
             <div className="d-flex flex-column align-items-center align-items-md-start">
-              <Image 
-                src="https://sproutandco.sirv.com/primary_logo.png" 
-                className="img-fluid mb-3" 
-                width={70} 
-                height={70} 
-                alt="Sprout & Co" 
+              <Image
+                src="https://sproutandco.sirv.com/primary_logo.png"
+                className="img-fluid mb-3"
+                width={70}
+                height={70}
+                alt="Sprout & Co"
                 style={{ objectFit: 'contain' }}
               />
               <p className="text-muted text-center text-md-start">
                 Eco-friendly, sustainable products for a greener tomorrow.
               </p>
-              {/* <div className="d-flex gap-3 mt-2 social-icons">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="Facebook">
+              <div className="d-flex gap-3 mt-2 social-icons justify-content-center justify-content-md-start">
+                <a href="https://facebook.com/sproutandco" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="Facebook">
                   <i className="bi bi-facebook fs-5"></i>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="Instagram">
+                <a href="https://instagram.com/sproutandco_zw" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="Instagram">
                   <i className="bi bi-instagram fs-5"></i>
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="Twitter">
-                  <i className="bi bi-twitter fs-5"></i>
+                <a href="https://tiktok.com/@sproutandco_zw" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="TikTok">
+                  <i className="bi bi-tiktok fs-5"></i>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="LinkedIn">
+                <a href="https://linkedin.com/company/sprout-and-co" target="_blank" rel="noopener noreferrer" className="text-muted hover-green" aria-label="LinkedIn">
                   <i className="bi bi-linkedin fs-5"></i>
                 </a>
-              </div> */}
+              </div>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
           </div>
 
-     
+
           {/* Customer Service */}
           <div className="col-6 col-md-2">
             <h5 className="footer-heading mb-3">Legal</h5>
@@ -87,7 +87,7 @@ const Footer = () => {
           <div className="col-sm">
             <h5 className="footer-heading mb-3">Newsletter</h5>
             <p className="text-muted small">Subscribe for updates, news and offers!</p>
-            <iframe src="https://sproutandco.substack.com/embed" className="w-100 rounded" style={{border:"1px solid #EEE", background:"white"}} frameBorder="0" scrolling="no"></iframe>
+            <iframe src="https://sproutandco.substack.com/embed" className="w-100 rounded" style={{ border: "1px solid #EEE", background: "white" }} frameBorder="0" scrolling="no"></iframe>
           </div>
         </div>
 
@@ -113,7 +113,7 @@ const Footer = () => {
               &copy; {currentYear} Sprout & Co. All rights reserved.
             </p>
           </div>
-         
+
         </div>
       </div>
 
