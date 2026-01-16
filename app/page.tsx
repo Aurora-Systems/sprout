@@ -81,6 +81,15 @@ export default function Shop() {
       </div>
       <div className="container-fluid p-0">
         <div className="row g-0 min-vh-100">
+        <div className="col-md-6 d-flex align-items-center justify-content-center order-md-2 p-5" style={{ backgroundColor: "#1a5f1a", minHeight: "100vh" }}>
+            <Fade direction="right" delay={300}>
+              <div className="text-white">
+                <h1 className="display-1 fw-bold text-white">Fruit Hampers</h1>
+                <p className="text-white">Looking to satisfy your sweet tooth in the healthiest way possible? Our fruit hampers offer a vibrant selection of handpicked seasonal fruits. Whether you&apos;re gifting a loved one or treating yourself, our fruit hampers are a delicious and nutritious choice. Each hamper is designed to offer a perfect balance of flavor and variety.</p>
+                <Link href="/shop"><button className="btn rounded-pill" style={{ backgroundColor: "white", color: "#1a5f1a", border: "none" }}>Shop Now</button></Link>
+              </div>
+            </Fade>
+          </div>
           <div className="col-md-6 p-0" style={{ height: "100vh", overflow: "hidden" }}>
             <Image
               src={"https://sproutandco.sirv.com/IMG-20250701-WA0053.jpg"}
@@ -88,19 +97,11 @@ export default function Shop() {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              style={{ objectFit: "cover", width: "100%", height: "100%", backgroundPosition: "left" }}
               alt="Fruit Hampers"
             />
           </div>
-          <div className="col-md-6 d-flex align-items-center justify-content-center p-5" style={{ backgroundColor: "#1a5f1a", minHeight: "100vh" }}>
-            <Fade direction="right" delay={300}>
-              <div className="text-white">
-                <h1 className="display-1 fw-bold text-white">Fruit Hampers</h1>
-                <p className="text-white">Looking to satisfy your sweet tooth in the healthiest way possible? Our fruit hampers offer a vibrant selection of handpicked seasonal fruits. Whether you&apos;re gifting a loved one or treating yourself, our fruit hampers are a delicious and nutritious choice. Each hamper is designed to offer a perfect balance of flavor and variety.</p>
-                <Link href="/shop"><button className="btn rounded-pill" style={{ backgroundColor: "white", color: "#1a5f1a", border: "none" }}>Buy Fruits</button></Link>
-              </div>
-            </Fade>
-          </div>
+         
         </div>
         <div className="row g-0 min-vh-100">
           <div className="col-md-6 d-flex align-items-center justify-content-center p-5 order-md-1" style={{ backgroundColor: "#1a5f1a", minHeight: "100vh" }}>
@@ -108,7 +109,7 @@ export default function Shop() {
               <div className="text-white">
                 <h1 className="display-1 fw-bold text-white">Vegetable Hampers</h1>
                 <p className="text-white">Fresh, crunchy, and nutrient-packed vegetables are just a click away. Our vegetable hampers come with a variety of seasonal produce that's perfect for every meal. From leafy greens to root vegetables, we have all your dietary needs covered with the freshest offerings straight from the farm.</p>
-                <Link href="/shop"><button className="btn rounded-pill" style={{ backgroundColor: "white", color: "#1a5f1a", border: "none" }}>Buy Vegetables</button></Link>
+                <Link href="/shop"><button className="btn rounded-pill" style={{ backgroundColor: "white", color: "#1a5f1a", border: "none" }}>Shop Now</button></Link>
               </div>
             </Fade>
           </div>
@@ -119,7 +120,7 @@ export default function Shop() {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              style={{ objectFit: "cover", width: "100%", height: "100%", backgroundPosition: "right" }}
               alt="Vegetable Hampers"
             />
           </div>
