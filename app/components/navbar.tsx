@@ -61,7 +61,7 @@ const Navbar = () => {
       <div className=" me-1 ">
         <div className="d-flex justify-content-between align-items-center text-white">
           {/* Logo */}
-          <div className="navbar-brand bg-white py-2 pe-1">
+          <div className="navbar-brand bg-white py-2 pe-4">
             <Link href="/" className="text-decoration-none text-dark fw-bold d-flex flex-row align-items-center gap-2">
               <Image 
                 src="https://sproutandco.sirv.com/primary_logo.png" 
@@ -102,7 +102,7 @@ const Navbar = () => {
               onClick={toggleDrawer}
               aria-label="Menu"
             >
-              <i className={`bi ${isDrawerOpen ? 'bi-x-lg' : 'bi-list'} fs-4 text-success`}></i>
+              <i className={`bi ${isDrawerOpen ? 'bi-x-lg' : 'bi-list'} fs-4 text-light`}></i>
             </button>
           </div>
         </div>
