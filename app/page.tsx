@@ -25,7 +25,7 @@ export default function Shop() {
 
   return (
     <div className="">
-      <div 
+      <div
         ref={headerRef}
         className="header d-flex align-items-center justify-content-center position-relative overflow-hidden"
         style={{ minHeight: "100vh", position: "relative" }}
@@ -49,9 +49,9 @@ export default function Shop() {
         >
           <source src="https://cdn.clipond.com/Travel%20Den/151714-804514460_medium.mp4" type="video/mp4" />
         </video>
-        
+
         {/* Overlay for better text readability */}
-        <div 
+        <div
           className="position-absolute top-0 left-0 w-100 h-100"
           style={{
             backgroundColor: "rgba(0, 0, 0, 0.3)",
@@ -62,7 +62,10 @@ export default function Shop() {
         {/* Content */}
         <div className="text-center mb-5 position-relative" style={{ zIndex: 2 }}>
           <Fade cascade={true} delay={300}>
-            <div className="bg-white p-4 rounded" style={{ display: "inline-block" }}>
+            <div className=" p-4 rounded" style={{
+              display: "inline-block",
+              backgroundColor: "rgba(255, 255, 255, 0.87)"
+            }}>
               <div>
                 <Image src={"https://sproutandco.sirv.com/primary_logo.png"} className="img-fluid " width={300} height={0} alt="Sprout & Co" />
               </div>
@@ -79,14 +82,14 @@ export default function Shop() {
       <div className="container-fluid p-0">
         <div className="row g-0 min-vh-100">
           <div className="col-md-6 p-0" style={{ height: "100vh", overflow: "hidden" }}>
-            <Image 
-              src={"https://sproutandco.sirv.com/IMG-20250701-WA0053.jpg"} 
-              className="w-100 h-100" 
+            <Image
+              src={"https://sproutandco.sirv.com/IMG-20250701-WA0053.jpg"}
+              className="w-100 h-100"
               width={0}
               height={0}
               sizes="100vw"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
-              alt="Fruit Hampers" 
+              alt="Fruit Hampers"
             />
           </div>
           <div className="col-md-6 d-flex align-items-center justify-content-center p-5" style={{ backgroundColor: "#1a5f1a", minHeight: "100vh" }}>
@@ -100,7 +103,7 @@ export default function Shop() {
           </div>
         </div>
         <div className="row g-0 min-vh-100">
-        <div className="col-md-6 d-flex align-items-center justify-content-center p-5 order-md-1" style={{ backgroundColor: "#1a5f1a", minHeight: "100vh" }}>
+          <div className="col-md-6 d-flex align-items-center justify-content-center p-5 order-md-1" style={{ backgroundColor: "#1a5f1a", minHeight: "100vh" }}>
             <Fade direction="left" delay={300}>
               <div className="text-white">
                 <h1 className="display-1 fw-bold text-white">Vegetable Hampers</h1>
@@ -110,17 +113,17 @@ export default function Shop() {
             </Fade>
           </div>
           <div className="col-md-6 p-0 order-md-1" style={{ height: "100vh", overflow: "hidden" }}>
-            <Image 
-              src={"https://sproutandco.sirv.com/IMG-20250701-WA0045.jpg"} 
-              className="w-100 h-100" 
+            <Image
+              src={"https://sproutandco.sirv.com/IMG-20250701-WA0045.jpg"}
+              className="w-100 h-100"
               width={0}
               height={0}
               sizes="100vw"
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
-              alt="Vegetable Hampers" 
+              alt="Vegetable Hampers"
             />
           </div>
-         
+
         </div>
       </div>
       <div className="container">
