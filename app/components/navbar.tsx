@@ -57,11 +57,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white border-bottom shadow-sm sticky-top">
-      <div className="ms-1 me-1 py-3">
-        <div className="d-flex justify-content-between align-items-center">
+    <div className="text-white  shadow-sm sticky-top" style={{ backgroundColor: "#1a5f1a" }}>
+      <div className=" me-1 ">
+        <div className="d-flex justify-content-between align-items-center text-white">
           {/* Logo */}
-          <div className="navbar-brand">
+          <div className="navbar-brand bg-white py-2 pe-1">
             <Link href="/" className="text-decoration-none text-dark fw-bold d-flex flex-row align-items-center gap-2">
               <Image 
                 src="https://sproutandco.sirv.com/primary_logo.png" 
@@ -71,25 +71,25 @@ const Navbar = () => {
                 alt="Sprout & Co" 
                 style={{ objectFit: 'contain' }}
               />
-              <span className="text-success">Sprout & Co</span>
+              <span className="tp">Sprout & Co</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="d-none d-md-block">
             <div className="d-flex gap-4">
-            <Link href="/" className={`text-decoration-none  fw-medium hover-underline ${selected==="Home"?"text-success":"text-dark"}`} onClick={()=>set_selected("Home")}>Home</Link>
-              <Link href="/shop" className={`text-decoration-none fw-medium hover-underline ${selected==="Shop"?"text-success":"text-dark"}`} onClick={()=>set_selected("Shop")}>Shop</Link>
-              <Link href="/about" className={`text-decoration-none fw-medium hover-underline ${selected==="About"?"text-success":"text-dark"}`} onClick={()=>set_selected("About")}>About</Link>
-              <Link href="/legal" className={`text-decoration-none fw-medium hover-underline ${selected==="Legal"?"text-success":"text-dark"}`} onClick={()=>set_selected("Legal")}>Legal</Link>
-              <Link href="/contact" className={`text-decoration-none  fw-medium hover-underline ${selected==="Contact"?"text-success":"text-dark"}`} onClick={()=>set_selected("Contact")}>Contact</Link>
+            <Link href="/" className={`text-decoration-none  fw-medium hover-underline text-white`} onClick={()=>set_selected("Home")}>Home</Link>
+              <Link href="/shop" className={`text-decoration-none fw-medium hover-underline text-white`} onClick={()=>set_selected("Shop")}>Shop</Link>
+              <Link href="/about" className={`text-decoration-none fw-medium hover-underline text-white`} onClick={()=>set_selected("About")}>About</Link>
+              <Link href="/legal" className={`text-decoration-none fw-medium hover-underline text-white`} onClick={()=>set_selected("Legal")}>Legal</Link>
+              <Link href="/contact" className={`text-decoration-none  fw-medium hover-underline text-white`} onClick={()=>set_selected("Contact")}>Contact</Link>
             </div>
           </div>
 
           {/* Call Button (Desktop) */}
           <div className="d-none d-md-block">
             <Link href="tel:+1234567890">
-              <button className="btn btn-outline-success rounded-pill px-4">
+              <button className="btn btn-outline-light rounded-pill px-4">
                 <i className="bi bi-telephone me-2"></i> Call Us
               </button>
             </Link>
