@@ -1,4 +1,8 @@
 
+:root {
+  --bs-success: #1a5f1a;
+  --bs-success-rgb: 26, 95, 26;
+}
 
 body{
   overflow-x: hidden!important;
